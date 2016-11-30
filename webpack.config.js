@@ -12,8 +12,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-        '$': 'jquery',
-        'jQuery': 'jquery'
+      '$': 'jquery',
+      'jQuery': 'jquery'
     })
   ],
   output: {
@@ -22,7 +22,11 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
-    alias:{
+    modulesDirectories: [
+      'node_modules',
+      './app/components'
+    ],
+    alias: {
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
@@ -44,5 +48,5 @@ module.exports = {
       path.resolve(__dirname, './node_modules/foundation-sites/scss')
     ]
   },
-  devtool: 'inline-source-map'
+  devtool: 'cheap-module-eval-source-map'
 };

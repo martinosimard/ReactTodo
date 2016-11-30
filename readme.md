@@ -1,1 +1,1 @@
- React Boilerplate version 2
+React simple Todo App
