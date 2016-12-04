@@ -1,1 +1,1 @@
-React simple Todo App
+React Todo App using React and Redux
