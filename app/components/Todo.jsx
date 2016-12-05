@@ -25,7 +25,7 @@ var Todo = React.createClass({
         </div>
         <div>
           <p>{text}</p>
-          <p classname="todo__subtext">{renderDate()}</p>
+          <p className="todo__subtext">{renderDate()}</p>
         </div>
 
       </div>
