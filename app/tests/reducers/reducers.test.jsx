@@ -41,6 +41,25 @@ describe('Reducers', () => {
     });
   });
 
+  it('should add existing Todos', () => {
+    var todos = [{
+      id: 1,
+      text: 'text 1',
+      completed: false,
+      completedAt: undefined,
+      createdAT: 33000
+    }];
+
+    var action = {
+      type: 'ADD_TODOS',
+      todos
+    };
+    var res = reducers.todosReducer(df([]), df(action));
+
+    expect(res.length).toEqual(1);
+    expect(res[0]).toEqual(todos[0]);
+  });
+  
   describe('toggleTodoReducer', () => {
     it('should toggle Todo', () => {
       var action = {

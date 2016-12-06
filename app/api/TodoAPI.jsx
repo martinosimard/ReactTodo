@@ -29,6 +29,9 @@ module.exports = {
 
     // Filter by searchText
     filteredTodos = filteredTodos.filter((todo) => {
+      if (typeof(todo.text) !== 'string')
+        return;
+
       var text = todo.text.toLowerCase();
       return searchText.length === 0 || text.indexOf(searchText) > -1;
     });
