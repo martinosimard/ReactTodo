@@ -8,20 +8,23 @@ var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
 
-store.subscribe(() => {
-  var state = store.getState();
-  console.log('New state', state);
-
-  TodoAPI.setTodos(state.todos);
-});
+// store.subscribe(() => {
+//   var state = store.getState();
+//   console.log('New state', state);
+//
+//   TodoAPI.setTodos(state.todos);
+// });
 
 // Examples of setting defaults values on startup for testing purposes
 // store.dispatch(actions.addTodo('Clean the yard'));
 // store.dispatch(actions.setSearchText('yard'));
 // store.dispatch(actions.toggleShowCompleted());
 
-var initialTodos = TodoAPI.getTodos();
-store.dispatch(actions.addTodo(initialTodos));
+// var initialTodos = TodoAPI.getTodos();
+// store.dispatch(actions.addTodo(initialTodos));
+
+// Acync to Firebase
+store.dispatch(actions.startAddTodos());
 
 // Load foundation
 $(document).foundation();
