@@ -8,8 +8,8 @@ export var TodoList = React.createClass({
   render: function () {
     var {todos, showCompleted, searchText} = this.props;
     var renderTodos = () => {
-      var filterTodos = TodoAPI.filterTodos(todos, showCompleted, searchText)`;
-      `
+      var filterTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
+      
       if (filterTodos.length === 0) {
         return (
           <p className="container__message">Nothing To Do</p>
