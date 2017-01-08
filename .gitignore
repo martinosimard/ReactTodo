@@ -1,3 +1,4 @@
 node_modules/
 public/bundle.js
-config/
+config/development.env
+config/test.env
